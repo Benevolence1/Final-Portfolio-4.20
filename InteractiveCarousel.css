@@ -1,0 +1,190 @@
+
+*{
+    background-color: black;
+}
+
+body{
+  width: 100%;
+    min-height: 100vh;  /* 1x viewport height = guaranteed scroll */
+    padding: 100px 0;
+}
+
+/* HEADER */
+  header{
+    background-color: rgba(0, 0, 0, 0.767);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* fixed so it can be stuck
+    and so it can be attached and stretch (responsive and stuff) */
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 20px 20px;
+    z-index: 10; 
+    /* I was forgetting my z index */
+    /* so it can be one top of everything to
+    be fixed  */
+    border: 0.01px solid black;
+}
+
+a{
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      border: none;
+      font-size: 42px;
+}
+
+  .name{
+    color: white;
+    background-color: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 45px;
+}
+
+.school{
+  color: white;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 32px;
+}
+
+
+
+.carousel {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+
+  /* so the track won't be seen */
+
+}
+/* Carousel Track 
+controls positon of slides and
+ movement
+ */
+.carousel-track {
+    display: flex;
+    width: max-content;
+    /*forgot what this meant  */
+    /* displays it to the largest display */
+    transform: translateX(0);
+    /* Moves the slide */
+    transition: transform 0.4s ease;
+    /* Easy eases it kinda like  */
+    /* animates it smoothly */
+}
+/* Controls W and H 
+and dictates layout of 
+content */
+.Hydra-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+/* The canvases
+controls
+the hydra code image itself */
+#hydraCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Buttons */
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 0, 0, 0);
+}
+
+/* NOT WORKING */
+/* Button customization */
+.left-button{
+  width: 100px;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      border: none;
+    font-weight: 700;
+      font-size: 39px;
+}
+
+.right-button{
+  width: 100px;
+color: rgb(255, 255, 255);
+      border: none;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 700;
+      font-size: 32px;
+}
+
+
+/* FOOTER */
+footer{
+  width: 100%;
+  white-space: nowrap;
+  /* so the text and can wrap around and not 
+  be on a horizontal straight line */
+  position: fixed;
+  /* do not use top */
+  /*  the reason why
+  bottom and left are used
+  is because it tells it
+  put at the bottom 
+  and start at the left */
+  bottom: 0;
+  left: 0;
+  /* why do we need 
+  the top bottom and etc */
+  padding: 10px 10px;
+  display: flex;
+  /* I understand why I need
+  the z index now */
+  /* but I don't understand the
+  flex part maybe it's to make
+  sure they're together */
+  z-index: 100;
+  color: rgb(247, 243, 255);
+  border: 0.5px solid black;
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+  
+}
+
+footer:hover{
+  /* color: rgb(255, 186, 226); */
+  color: rgba(191, 248, 255, 0.918);
+}
+
+.animation{
+  display: inline-block;
+  animation: slide-right 20s linear infinite;
+  font-size: 50px;
+background: none;
+}
+
+@keyframes slide-right{
+  0% {transform: translateX(-100%);
+  }
+  100%{transform: translateX(-50%);}
+}
+
+
+/* Mobile Layout */
+
+

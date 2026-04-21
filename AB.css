@@ -1,0 +1,442 @@
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    
+  }
+
+  body{
+    /* to give more 'room'
+    so you can see the preview 
+    case studies */
+    padding-bottom: 100px;
+    /* so you can't scroll down
+    past a certain point
+    x is used because you know
+    it's vertical */
+    overflow-x: hidden;
+  }
+
+  header{
+    background-color: rgba(255, 255, 255, 0.932);
+  position: fixed;
+  top: 0;
+    left: 0;
+    right: 0; 
+    /* why did I need this for it to work? */
+    /* so it could stretch in the center and be
+    positioned that way  */
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 40px 20px;
+    z-index: 10; 
+    /* I was forgetting my z index */
+    /* so it can be one top of everything to
+    be fixed  */
+    border: 0.01px solid black;
+}
+
+
+
+  .name{
+    background-color: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 45px;
+}
+
+.school{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 32px;
+}
+
+/* HOVER EFFECTS */
+.name:hover{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+nav{
+ 
+  display: flex;
+  gap:10px
+}
+
+
+a{
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+}
+/* 
+a:hover{
+  font-size: small;
+
+} */
+
+
+/* main section */
+
+.main-sect{
+  position: relative;
+  z-index: 1;
+  /* I somewhat understand why this is 
+  here*/
+  /* I just don't understand why it's
+  1 */
+  padding-top: 100px;
+}
+
+/* BRO PLEASE LOOK AT HTML
+AS YOUR MAKING IT AND IT'LL MAKE
+SENSE */
+
+
+/* CONTENT wrapper */
+/* THIS IS THERE
+ SO THE CAROUSEL
+ITEMS and OTHERS
+ DON'T STRETCH */
+/* why do I have to set the 
+    width?  */
+    /* YOU have to
+     set the width
+    so everything 
+    DOESN'T bloat 
+    out */
+    /* I messed up
+
+
+    I just noticed
+     I was missing 
+     an extra div 
+     for the 
+     carousel and
+    that my 
+    'carousel 
+    wrapper'
+     is 
+    the main wrapper 
+    for everything 
+    that sets the
+     tone for every
+    item*/
+
+    /* I think
+     I meant content wrapper
+    sets the tone
+     for everything */
+    /* so it
+     doesn't 
+     stretch */
+/* it was the 
+CONTENT WRAPPER 
+THAT CAUSED IT 
+TO BE MESSED UP
+ */
+    .content-wrap{
+
+
+  max-width: 1200px;
+  /* so the content doesn't 
+  stretch and the sweet spot */
+  margin: 0 auto;
+  /* centers everything (like
+  all the items and stuff) */
+  padding: 0 60px;
+}
+/* To push it to the center (the content that's parenting) */
+
+
+/* why does the carousel
+ need position relative  */
+
+/* CAROUSEL */
+/* THIS IS THE place
+where the CAROUSEL IS
+or located */
+ .carousel{
+  position: relative;
+  width: 80%; 
+  /* to take up space I know that */
+  overflow: hidden;
+  /* kinda know this */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* aspect-ratio: 16/9; */
+  /* understand it but is it
+    needed? because you want it to keep
+    a like certain shape */
+      margin: 30px auto; /* Auto margins center it horizontally */
+
+    margin-bottom: 30px;
+  top:20px;
+ }
+  
+
+    /* track part of the carousel */
+    /* I don't understand why I need flex and w and h */
+    /* it makes sense but I wouldn't have thought of it */
+    /* A thing I didn't take into account is that I actually have to build
+    EVERYTHING and that includes thinking of the mechanics which is something
+    that I've never thought (e.g: the film thing with the carousel being the
+    frame and stuff */
+    .carousel-inner{
+      display: flex;
+      /* when I put w and h
+      at 100 it nows show the first track
+      I feel like I'm not 'studying' this
+      right and I'm not even looking at the
+      html structure */
+      width: 100%;
+      height: 100%;
+     transition: transform 0.5 ease ;
+     /* slide animation */
+     /* carousel inner is basically the mechanic of the
+     carousel itself so thats why the transition is here */
+    }
+
+    /* THE SPACE THAT HOLDS
+THE IMAGES PER SE?
+THIS CONTROLS HOW THE IMAGES
+MOVE OR CONDUCT THEMSELVES
+(as a refernce point ig) */
+
+.image-holder{
+ min-height: 100%;
+ min-width: 100%;
+ /* wouldn't the image holder
+ have padding? */
+ /* No it wouldn't b/c
+  it would uncenter stuff 
+  or break something */
+  /* MIN H and W mean at the 
+  minimum like IT SHOULD BE THIS 
+  NO BUTS OR CUTS about it */
+ 
+}
+
+/* THE IMAGES IN THE 
+CAROUSEL */
+.image-holder img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* I see this is
+  for the images to 
+  take up space ALL
+  of it */
+}
+
+
+    .button-sect{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+
+    }
+
+    button{
+      
+      color: rgb(255, 185, 233);
+      font-family: 'Inter';
+      font-weight: 700;
+      font-size: 60px;
+      background: none;
+      /* Idk exactly what this does */
+      /* it's so the button doesn't have a background
+      color */
+      border: none;
+      /* YOU NEED THIS TO GET RID OF THE BORDERS
+       */
+          transform: opacity 0.5s ease;
+
+    }
+
+  button:hover{
+    opacity: 0.7;
+  }
+.preview-image {
+  display: grid; /* ONLY grid, not flex */
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  gap: 60px;
+  justify-items: center; /* Centers images inside grid cells */
+  width: 80%; /* Makes the whole grid smaller */
+  margin: 0 auto; /* Centers the grid itself */
+}
+
+.L-image,
+.R-image {
+  width: 100%; /* Fill grid cell */
+  display: flex;
+  justify-content: center;
+}
+
+.L-image img,
+.R-image img {
+  aspect-ratio: 4/5;
+  width: 100%; /* Image size within cell */
+  height: auto; /* Let aspect-ratio handle height */
+  border: 2px black solid;
+  transition: opacity 0.5s ease-in-out; /* Fixed comma! */
+}
+.L-image img:hover{
+  opacity: 0.4;
+  transition: transform 0.2s ease;
+  transform: translateY(-8px);
+}
+.R-image img:hover{
+  opacity: 0.4;
+  transition: transform 0.2s ease;
+    transform: translateY(-8px);
+}
+
+/* MARQUEE MY FAV PART */
+
+
+footer{
+  width: 100%;
+  white-space: nowrap;
+  /* so the text and can wrap around and not 
+  be on a horizontal straight line */
+  /* position: fixed; */
+  /* do not use top */
+  /*  the reason why
+  bottom and left are used
+  is because it tells it
+  put at the bottom 
+  and start at the left */
+  /* bottom: 0;
+  left: 0; */
+  /* why do we need 
+  the top bottom and etc */
+  padding: 10px 10px;
+  display: flex;
+  /* I understand why I need
+  the z index now */
+  /* but I don't understand the
+  flex part maybe it's to make
+  sure they're together */
+  z-index: 100;
+  color: rgb(255, 128, 200);
+  border: 0.5px solid black;
+  background: rgb(255, 255, 255);
+  overflow-x: hidden;
+  
+}
+
+footer:hover{
+  /* color: rgb(255, 186, 226); */
+  color: red;
+}
+
+.animation{
+  display: inline-block;
+  animation: slide-right 25s linear infinite;
+  font-size: 50px;
+background: none;
+}
+
+
+@keyframes slide-right{
+  0% {transform: translateX(-100%);
+  }
+  100%{transform: translateX(-50%);}
+}
+
+/* Responsive Design */
+@media (max-width: 768px){
+  body{
+    padding-top: 105px;
+    padding-bottom: 120px;
+  }
+
+
+
+  .carousel{
+    margin-left: -35px;
+    align-items: center;
+  display: flex;
+  max-width: 60%;
+  }
+
+    .carousel-inner{
+      width: 100%;
+      align-items: center;
+      
+    }
+
+    .image-holder{
+      width: 100%;
+      justify-content: center;
+      display: flex;
+    }
+
+
+  .content-wrap{
+
+    flex-direction: column;
+    width: 175%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0, 190px;
+    
+  }
+  .preview-image{
+    display: flex;
+  flex-direction: column;
+    align-items: center;
+  }
+.L-image, .R-image{
+  display: flex;
+  width: 100%;
+   justify-content: center;
+
+
+}
+
+.L-image img,
+.R-image img {
+  width: 55%;
+  height: auto;
+}
+  .R-image:hover{
+    transform: translateY(18px);
+  }
+  button{
+    font-size: 20px;
+  
+  }
+  .button-sect{
+
+    width: 55%;
+  }
+  header{
+    background-color: rgba(255, 255, 255, 0.777);
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 70px;
+    top: 0;
+    z-index: 10;
+
+
+  }
+  .L-image{
+    margin-bottom: 15px;
+  }
+  .name{
+    font-size: 30px;
+  }
+  .school{
+    font-size: 25px;
+  }
+  nav{
+    font-size: 10px;
+    ;
+
+    flex-direction: column;
+  }
+}

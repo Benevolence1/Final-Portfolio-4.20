@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+   /* makes the width and height go by brain logic */
+    box-sizing: border-box;
+}
+
+
+body{
+    color: white;
+    background-color: black;
+}
+
+
+/* Nav-Bar  */
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3%;
+  align-items: center;
+  background-color: rgb(239, 178, 221);
+}
+
+
+
+/* Hydra elements */
+/* First the Hydra 
+Background */
+#hydrabck{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+
+/* Loading|animation */
+/* Loading|Animation*/
+/* Basically this one
+is to give the settings to take
+up the whole screen */
+
+#hydraloadingani{
+    position: absolute;
+    /* not the north star
+    but to position everything you 
+    know */
+    top: 0;
+    left: 0;
+    background-color: rgba(132, 0, 255, 0);
+    /* so you can click through */
+    pointer-events: none;
+    /* we add the transition here
+    like a instruction that has yet to be
+    done but will be, like 'manifesting' kinda  */
+    transition: 0.4s opacity ;
+    z-index: 50;
+    /* being on top of
+    everything like the hero section 
+     you know */
+    width: 100% ;
+    height: 100%;
+    opacity: 0;
+}
+
+/* This settings then makes
+the loading overlay visible
+since it won't be showing all the
+time */
+
+#hydraloadingani.active{
+    opacity: 1;
+}
+
+/* This is here
+so the overlay ani
+can stretch and 
+fill the canvas */
+/* like the ACTUAL
+ANIMATION
+is now taking up the space */
+#hydraloadingcanvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Navbar */
+.nav{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid white;
+    position:fixed;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 20px 40px;
+    z-index:40;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+
+
+
+
+
+
+/* Hero Section */
+.hero{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    min-height: 100vh;
+    /* this kinda centers/positions
+    everything */
+    padding: 120px 40px 40px;
+    gap: 40px;
+    position: relative;
+    /* it's the north
+    star for where those
+    elements need to be */
+    overflow: hidden;    
+}
+
+
+/* Now for the Left side/poster
+carousel */
+
+.left-reserved{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    z-index: 1;
+    /* above the background */
+}
+
+.left-space{
+    display:flex;
+    align-items: center;
+    gap:30px;
+    width:100%;
+    max-width: 700px;
+}
+
+button{
+        background: rgba(255, 255, 255, 0.654);
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Circular */
+    cursor: pointer;
+    transition: all 0.3s;
+    /* I don't know
+     what this means 
+     nvm just makes
+    the transition smoother
+        when you hover and stuff
+     */
+    z-index: 2; /* Above poster */
+    padding: 0 10px;
+}
+
+button:hover{
+    background: white;
+}
+
+
+
+
+
+
+/* Poster part */
+.poster-reserved{
+    position:relative;
+    flex:1;
+    aspect-ratio: 3/4;
+    overflow: visible;
+}
+
+.poster-space{
+    position:relative;
+    width:100%;
+    height:100%;
+    z-index: 1;
+}
+
+.poster-space img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Keeps aspect ratio */
+    transition: opacity 0.4s;
+}
+
+.poster-space img.fade-out {
+    opacity: 0;
+    /* JS will add the 
+    other images when this fades
+    out */
+}
+
+
+/* Right-side */
+
+.right-reserved{
+    display:flex;
+    align-items: center;
+    padding: 40px;
+    transition: background-color 0.6s ease; /* Smooth color change */
+    position: relative;
+    z-index: 1;
+    background-color:rgba(255, 0, 0, 0.113);
+}
+
+.form{
+    max-width: 500px;
+}
+
+.poster-title{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background-color: black;
+    padding: 9px 5px;
+}
+.poster-reserved {
+    position: relative;
+    flex: 1;
+    aspect-ratio: 3/4;
+}
+
+.poster-space img {
+    display: block; /* ADD THIS */
+}
+.poster-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: black;
+    padding: 5px 5px;
+}
+
+/* Divider */
+.dividor-reserved{
+    position:relative;
+    z-index: 1;
+   
+    padding:40px;
+    background:black;
+    border:white 2px solid;
+}
+
+
+.divider-text {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* Photo Grid */
+.bottom-half-reserved {
+    display: grid;
+    background: black;
+    position: relative;
+    min-height: 60vh;
+    padding: 40px;
+}
+
+
+.grid-reserved{
+    position: relative;
+    z-index: 1;
+}
+.photogrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Now for the actual
+grid */
+
+
+.photo-slot{
+    aspect-ratio:  1;
+    background:black;
+    border: 2px solid black;
+    overflow: hidden;
+
+}
+
+.photo-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    /* Stack hero sections vertically instead of side-by-side */
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    /* Full width background on mobile */
+    #bgHydra {
+        width: 100%;
+    }
+
+    /* 2 columns instead of 4 for grid */
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Smaller buttons */
+    .nav-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    /* Smaller title */
+    .poster-title {
+        font-size: 32px;
+    }
+}
+
+.bottom-half-reserved {
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: parallax effect */
+    
+    position: relative;
+    min-height: 60vh;
+}
+
+.bottom-half-reserved::before{
+    content: '';
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.637); /* Black with 60% opacity */
+    z-index: 0;
+}
