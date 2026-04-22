@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster-Info</title>
+    <link rel="stylesheet" href="graphics1AB.css">
+</head>
+<body>
+
+
+    
+    <!-- Nav-bar -->
+    <div class="nav">
+        <div class="2026graphics">
+            <h3>2026</h3>
+            <p>Graphics</p>
+        </div>
+        <div class="graphicUi">
+            <a href="graphics.html">
+                Return to Graphics
+            </a>
+        </div>
+    </div>
+
+
+<!-- Hero Section -->
+ <!-- this will have all the content including the
+  hydra loading animation and the background as well!! -->
+<section class="hero">
+    <!-- hydrabackground -->
+ <canvas id="hydrabck"></canvas>
+<!-- hydra loading animation/overlay -->
+ <div class="active" id="hydraloadingani" >
+<canvas id="hydraloadingcanvas"></canvas>
+ </div>
+<!-- Actual Content so posters and info and photogrid and etc -->
+ <!-- Left Side -->
+  <div class="left-reserved">
+    <div class="left-space">
+        <button id="btn-L">
+            L
+        </button>
+        <!-- our poster where are hydra bck is -->
+        <div class="poster-reserved">
+            <div class="poster-space">
+                <!-- <img id="current-poster" src="/Practice Sites (for interests and in general)/Images/DC TECH ART FLYER.jpg" alt=""> -->
+            </div>
+        </div>
+        <button id="btn-R">R</button>
+    </div>
+  </div>
+  <!-- Right-Side -->
+   <div class="right-reserved">
+    <div class="right-space">
+        <div class="form">
+            <div class="header">
+                <h1 class="poster-title" id="poster-title" >
+
+                </h1>
+            </div>
+            <div class="description">
+                <p class="poster-description" id="poster-title" >
+
+                </p>
+            </div>
+        </div>
+    </div>
+   </div>
+   <!-- Process Breakdown and PhotoGrid -->
+ </section>
+
+<div class="divider-reserved">
+    <h3 class="divider-text">Process Breakdown</h3>
+</div>
+
+<div class="bottom-half-reserved">
+    <div class="grid-reserved">
+        <div id="photogrid" class="photogrid">
+            <div class="photo-slot"><img src="" alt=""></div>
+            <div class="photo-slot"><img src="" alt=""></div>
+            <div class="photo-slot"><img src="" alt=""></div>
+            <div class="photo-slot"><img src="" alt=""></div>
+            <div class="photo-slot"><img src="" alt=""></div>
+            <div class="photo-slot"><img src="" alt=""></div>
+            <div class="photo-slot"><img src="" alt=""></div>
+            <div class="photo-slot"><img src="" alt=""></div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="graphics1.js"></script>
+
+</body>
+</html>
