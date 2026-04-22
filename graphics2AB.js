@@ -23,7 +23,7 @@ const posters = [
     },
     {
         title:"D.C Art x Tech",
-        mainImage:"DC-EventARTTECHOUSE.jpg",
+        mainImage:"DC-EventARTTECHOUSE.png",
                 rightSideColor: "#ab5ce4",
 
         description: "D.C Art x Tech is a poster made with Hydra and Photoshop to advertise art events that involve integrated usages of technology. Personally I hear the most about these events in places like NY or San Francisco, because of that I decided to make this poster.",
