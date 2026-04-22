@@ -6,7 +6,7 @@ const rightSide = document.querySelector(".right-reserved");
 const posters = [
     {
         title:"Digital Expansion",
-        mainImage:"DigitalDomainPoster.jpg",
+        mainImage:"DigitalDomainPoster.png",
                 rightSideColor: "#FF00FF",
 
         description: "Digital expansion is a poster made in Hydra and Photoshop. I made an abstract bit-mapped piece using hydra, a live coding software, and in Photoshop where I edited the colors using camera filter raw, and other color grading techniques, and added the text.",
@@ -23,7 +23,7 @@ const posters = [
     },
     {
         title:"D.C Art x Tech",
-        mainImage:"DC-EventARTTECHOUSE.jpg",
+        mainImage:"DC-EventARTTECHOUSE.png",
                 rightSideColor: "#ab5ce4",
 
         description: "D.C Art x Tech is a poster made with Hydra and Photoshop to advertise art events that involve integrated usages of technology. Personally I hear the most about these events in places like NY or San Francisco, because of that I decided to make this poster.",
