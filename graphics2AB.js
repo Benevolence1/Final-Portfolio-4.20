@@ -6,7 +6,7 @@ const rightSide = document.querySelector(".right-reserved");
 const posters = [
     {
         title:"Digital Expansion",
-         mainImage:"DigitalDomainPoster.jpg",
+        mainImage:"DigitalDomainPoster.png",
                 rightSideColor: "#FF00FF",
 
         description: "Digital expansion is a poster made in Hydra and Photoshop. I made an abstract bit-mapped piece using hydra, a live coding software, and in Photoshop where I edited the colors using camera filter raw, and other color grading techniques, and added the text.",
@@ -23,7 +23,7 @@ const posters = [
     },
     {
         title:"D.C Art x Tech",
-            mainImage:"DC-EventARTTECHOUSE.jpg",
+        mainImage:"Screenshot2026-03-19011235.png",
                 rightSideColor: "#ab5ce4",
 
         description: "D.C Art x Tech is a poster made with Hydra and Photoshop to advertise art events that involve integrated usages of technology. Personally I hear the most about these events in places like NY or San Francisco, because of that I decided to make this poster.",
@@ -40,8 +40,8 @@ const posters = [
     },
      {
         title: "Hydra Live Coding",
-  mainImage: "hydraLivecodingPoster.png",
-         description: "Hydra Live Coding is a poster made with Hydra and Photoshop used to advertise a live coding event. I got into hydra mid to late last year to not have to learn that many adobe programs, however I fell in love with making cool visuals without having to learn a lot of things with a few lines of code. But, I noticed there's not many events in the DMV that have this, so I made this poster.",
+        mainImage: "hydraLivecodingPoster.png",
+        description: "Hydra Live Coding is a poster made with Hydra and Photoshop used to advertise a live coding event. I got into hydra mid to late last year to not have to learn that many adobe programs, however I fell in love with making cool visuals without having to learn a lot of things with a few lines of code. But, I noticed there's not many events in the DMV that have this, so I made this poster.",
         rightSideColor: "#b6e7ff",
         gridBackgroundImage: "Screenshot 2026-03-19 012059.png", // Add your image
         // hydraCode: function () {
