@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+} 
+
+
+/* Hydra bck layout styles */
+
+#hydraCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* display: inline-block; */
+  pointer-events: none; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* poster image layout settings */
+
+
+
+.posters{
+    position: absolute; 
+    top: 20%;
+    /* we have absolute to position the 
+    posters where they are which is slightly in the center
+     */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+ 
+.content-posters{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap:5%;
+}
+/* The a links */
+.content-posters a {
+    display: block;
+     /* we needed the block
+        so it wouldn't break the flex
+        layout */
+    width: 23%;
+       
+
+
+}
+/* images/posters */
+.content-posters img {
+    width: 100%; 
+     /* Fill parent <a> tag */
+    height: auto;
+    display: block;
+}
+
+.content-posters img:hover{
+      opacity: 1;
+  transition: transform 0.2s ease;
+  transform: translateY(-20px);
+}
+
+/* transition for how to animate */
+/* transfomr telling what exactly to animate */
+/* translate for where to move and stuff
+Y for Up and X for Down */
+/* NAV */
+
+
+.nav-bar{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap; 
+    /* prevents items from going off screen */
+
+
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50%;
+    z-index: 1;
+    color: white;
+    padding: 10px 10px;
+
+
+}
+
+.nav-bar, h3{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav a{
+text-decoration: none;
+color: white;
+justify-content: center;
+font-size: 10px;
+padding: 0;
+}
